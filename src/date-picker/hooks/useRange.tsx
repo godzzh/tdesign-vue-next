@@ -123,7 +123,7 @@ export default function useRange(props: TdDateRangePickerProps) {
       // 输入框点击不关闭面板
       if (context.trigger === 'trigger-element-click') {
         const indexMap = { 0: 'first', 1: 'second' };
-        inputRef.value.focus({ position: indexMap[activeIndex.value] });
+        inputRef.value && inputRef.value.focus({ position: indexMap[activeIndex.value] });
         popupVisible.value = true;
         return;
       }
